@@ -18,10 +18,10 @@ function updateCurrentTimeAndDay() {
   ];
 
   const currentDay = daysOfWeek[currentTime.getUTCDay()];
-  const formattedTime = currentTime.toUTCString();
+  const currentUTCTime = currentTime.getTime();
 
   currentDayElement.textContent = currentDay;
-  currentTimeElement.textContent = formattedTime;
+  currentTimeElement.textContent = currentUTCTime;
 }
 
 // Update the current time and day every second
